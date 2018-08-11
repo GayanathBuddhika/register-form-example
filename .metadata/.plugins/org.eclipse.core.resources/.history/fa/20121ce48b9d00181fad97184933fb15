@@ -10,7 +10,7 @@ public interface userService {
 	public void adduser(userModel user);
 	public List<userModel> getAllUsers();
 	public Optional<userModel> findById(Integer id);
-	public void deleteById(Integer id);
+	public void deleteById(id);
 	
 
 }

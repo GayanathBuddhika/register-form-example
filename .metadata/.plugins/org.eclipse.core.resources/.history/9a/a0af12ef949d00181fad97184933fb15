@@ -77,12 +77,9 @@ public class userController {
 		
 	//delete user
 	@GetMapping(value="deleteUser/{id}")
-	public ModelAndView deleteUser(@PathVariable Integer id) {
+	public String deleteUser(@PathVariable Integer id) {
 		userService.deleteById(id);
-		ModelAndView mv=new ModelAndView();
-		mv.addObject("allUsers", userService.getAllUsers());
-		mv.setViewName("userInfo");
-		return mv;
+		return "userInfo";
 		
 		
 	}

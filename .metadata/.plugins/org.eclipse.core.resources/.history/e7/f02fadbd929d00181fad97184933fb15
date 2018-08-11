@@ -15,19 +15,17 @@
         <tr th:each="user : ${oneUser}">
 	     <td th:text="${user.id}">Id</td>
 	      <td th:text="${user.first_name}">Id</td>
-		  <td th:text="${user.last_name}">Title</td> 
-		  <td><a href="#" th:href="@{/user/deleteUser/{id}(id=${user.id})}">Delete user</a></td> 
-		  
-		 <!--  <td>
-                    <form th:action="@{/user/deleteUser/${id}}" th:object="${user}" method="post">
-                        <input type="hidden" th:field="${user}">Delete</input>
-                        
+		  <td th:text="${user.last_name}">Title</td>  
+		  <td>
+                    <form th:action="@{/deleteBuyer/${id}}" th:object="${buyer}" method="post">
+                        <input type="hidden" th:field="${buyer}">Delete</input>
+                        <button type="submit" onClick="return confirm('sure?')"/>
                     </form>
-                </td>		 -->  
+                </td>		  
 	    </tr>	
 	</table>
-	  
-	<!-- <a href="#" th:href="@{/user/editUser}">Edit user</a> 
-  -->
+	<!--  <a href="#" th:href="@{/user/deleteUser/user(id=${user.id})}">Delete user</a>
+	<a href="#" th:href="@{/user/editUser}">Edit user</a> 
+ -->
 </body>
 </html>

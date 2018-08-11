@@ -36,12 +36,6 @@ public class UserServiceImpl implements userService{
 		return userRepo.findById(id);
 	}
 
-	@Override
-	public void deleteById(Integer id) {
-	 userRepo.deleteById(id);
-		
-	}
-
 	
 	
 
