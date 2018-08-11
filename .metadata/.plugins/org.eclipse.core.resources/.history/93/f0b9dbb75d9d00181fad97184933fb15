@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>search user</title>
+</head>
+<body>
+<h1>search user page</h1>
+
+<form action="#" th:action="@{/user/searchUser}" th:object="${user}" method="POST">
+<table>
+<tr>
+<td>user id</td>
+<td><input type="text" th:field="*{id}" ></td>
+</tr>
+
+<tr>
+<td>first name</td>
+<td><input type="text" th:field="*{first_name}" ></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="search"></td>
+</tr>
+
+</table>
+</form>
+
+</table>
+</form>
+</body>
+</html>

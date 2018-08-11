@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>user data</title>
+</head>
+<body>
+<table>
+        <tr>
+           <th>user id</th>
+           <th>first name</th>
+           <th >last name</th>
+        </tr>
+       <!--  <tr th:each="user : ${oneUser}">
+	      <td th:text="${user.id}">Id</td>
+	      <td th:text="${user.first_name}">Id</td>
+		  <td th:text="${user.last_name}">Title</td>  		  
+	    </tr>	
+	</table> -->
+	<!-- <a href="#" th:href="@{/user/deleteUser}">Delete user</a>
+	<a href="#" th:href="@{/user/editUser}">Edit user</a> -->
+
+</body>
+</html>
