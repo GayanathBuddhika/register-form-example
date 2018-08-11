@@ -1,0 +1,34 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.userModel;
+import com.example.demo.repositorys.userRepo;
+
+@Service
+public class UserServiceImpl implements userService{
+	
+	private userRepo userrepo;
+	
+	private List<userModel> userlist=new ArrayList<>();
+
+	public void adduser(@Valid userModel user) {
+		
+		userlist.add(user);
+		
+		
+	}
+
+	public List<userModel> getAllUsers() {
+		// TODO Auto-generated method stub
+		return userlist;
+	}
+	
+	
+
+}

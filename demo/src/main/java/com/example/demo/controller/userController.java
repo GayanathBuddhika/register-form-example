@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.model.userModel;
-import com.example.demo.service.UserService;
+import com.example.demo.service.userService;
 
 @Controller
 @RequestMapping(value="/user")
 public class userController {
 	@Autowired
-	private UserService userService; 
+	private userService userService; 
 	
 	@GetMapping(value="/createUser")
 	public ModelAndView createUserview() {

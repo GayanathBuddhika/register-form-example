@@ -1,0 +1,8 @@
+package com.example.demo.repository;
+
+public class userRepo extends JpaRepository <userModel, Integer>{
+	
+	
+}
+
+}
