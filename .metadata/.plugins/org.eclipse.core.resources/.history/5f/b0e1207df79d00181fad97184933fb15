@@ -104,7 +104,7 @@ public class userController {
 		System.out.println("return edit3");
 		
 		userService.deleteById(id);
-		userService.adduser(updateUser);
+		userService.adduser(updateUser );
 		
 		System.out.println("return edit4");
 		mv.setViewName("editUser");

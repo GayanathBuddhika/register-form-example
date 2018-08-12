@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -97,24 +98,12 @@ public class userController {
 		return mv;
 	}
 	
-	@PostMapping(value="/updateUser/{id}")
-	public ModelAndView updateUser(@PathVariable Integer id ,@Valid userModel updateUser  ) {
+	@PostMapping(value="/updateUser")
+	public ModelAndView updateUser(@Valid userModel updateUser ) {
 		ModelAndView mv=new ModelAndView();
-		
-		System.out.println("return edit3");
-		
-		userService.deleteById(id);
 		userService.adduser(updateUser);
-		
-		System.out.println("return edit4");
-		mv.setViewName("editUser");
-		
-		System.out.println("return edit5");
-		
 		mv.addObject("allUsers", userService.getAllUsers());
-		
 		mv.setViewName("userInfo");
-		
 		return mv;
 		
 		

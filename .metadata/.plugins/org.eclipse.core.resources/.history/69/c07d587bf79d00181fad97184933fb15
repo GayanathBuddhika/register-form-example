@@ -97,24 +97,19 @@ public class userController {
 		return mv;
 	}
 	
-	@PostMapping(value="/updateUser/{id}")
-	public ModelAndView updateUser(@PathVariable Integer id ,@Valid userModel updateUser  ) {
+	@PostMapping(value="/updateUser")
+	public ModelAndView updateUser(@Valid userModel updateUser ) {
 		ModelAndView mv=new ModelAndView();
-		
-		System.out.println("return edit3");
-		
-		userService.deleteById(id);
+		if(updateUser.getId() != null) {
+			System.out.println("return edit3");
 		userService.adduser(updateUser);
-		
-		System.out.println("return edit4");
-		mv.setViewName("editUser");
-		
+		}else {
+			System.out.println("return edit4");
+			mv.setViewName("editUser");
+		}
 		System.out.println("return edit5");
-		
 		mv.addObject("allUsers", userService.getAllUsers());
-		
 		mv.setViewName("userInfo");
-		
 		return mv;
 		
 		

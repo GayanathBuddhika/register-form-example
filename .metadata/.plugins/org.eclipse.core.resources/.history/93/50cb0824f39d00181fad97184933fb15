@@ -8,7 +8,7 @@
 <body>
 <h1>user edit page</h1>
 
- <form action="#" th:action="@{/user/updateUser/{id}(id=${user3.id})}" th:object="${user3}" method="POST">
+ <form action="#" th:action="@{/user/updateUser}" th:object="${user3}" method="POST">
 <table >
 <tr >
 <td>first name</td>
