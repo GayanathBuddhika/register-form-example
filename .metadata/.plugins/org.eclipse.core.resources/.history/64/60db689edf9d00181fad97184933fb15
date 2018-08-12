@@ -98,7 +98,7 @@ public class userController {
 		return mv;
 	}
 	
-	@PostMapping(value="/updateUser")
+	@PutMapping(value="/updateUser")
 	public ModelAndView updateUser(@Valid userModel updateUser ) {
 		ModelAndView mv=new ModelAndView();
 		userService.adduser(updateUser);

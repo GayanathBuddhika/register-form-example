@@ -3,16 +3,18 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>user data</title>
+<title>edit user</title>
 </head>
 <body>
+<h1>user edit page</h1>
+
 <table>
         <tr>
            <th>user id</th>
            <th>first name</th>
            <th >last name</th>
         </tr>
-        <tr th:each="user : ${oneUser}">
+        <tr th:each="user : ${user3}">
 	     <td th:text="${user.id}">Id</td>
 	      <td th:text="${user.first_name}">Id</td>
 		  <td th:text="${user.last_name}">Title</td> 
@@ -21,5 +23,24 @@
 		 
 	    </tr>	
 	</table>
+ <!-- <form action="#" th:action="@{/user/updateUser}" th:object="${updateUser}" method="POST">
+<table >
+<tr th:each="user : ${user3}">
+<td>first name</td>
+<td><input type="text" th:field="*{first_name}" th:value="${user.first_name}"></td>
+</tr>
+
+<tr>
+<td>last name</td>
+<td><input type="text" th:field="*{last_name}" th:value="${user3.last_name}"></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="update"></td>
+</tr>
+
+</table>
+</form>  -->
+
 </body>
 </html>

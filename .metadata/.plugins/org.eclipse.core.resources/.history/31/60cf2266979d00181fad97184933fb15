@@ -17,9 +17,17 @@
 	      <td th:text="${user.first_name}">Id</td>
 		  <td th:text="${user.last_name}">Title</td> 
 		  <td><a href="#" th:href="@{/user/deleteUser/{id}(id=${user.id})}">Delete user</a></td> 
-		  <td><a href="#" th:href="@{/user/editUser/{id}(id=${user.id})}">Edit user</a></td>
-		 
+		  
+		 <!--  <td>
+                    <form th:action="@{/user/deleteUser/${id}}" th:object="${user}" method="post">
+                        <input type="hidden" th:field="${user}">Delete</input>
+                        
+                    </form>
+                </td>		 -->  
 	    </tr>	
 	</table>
+	  
+	<!-- <a href="#" th:href="@{/user/editUser}">Edit user</a> 
+  -->
 </body>
 </html>

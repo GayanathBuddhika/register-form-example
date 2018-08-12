@@ -10,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -91,9 +90,7 @@ public class userController {
 	@GetMapping(value="/editUser/{id}")
 	public ModelAndView editUser(@PathVariable Integer id) {
 		ModelAndView mv=new ModelAndView();
-		System.out.println("return edit1");
-		mv.addObject("user3", userService.findById(id).get());
-		System.out.println("return edit2");
+		mv.addObject("user3", userService.findById(id));
 		mv.setViewName("editUser");
 		return mv;
 	}
