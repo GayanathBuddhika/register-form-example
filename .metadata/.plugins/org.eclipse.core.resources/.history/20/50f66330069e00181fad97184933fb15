@@ -47,9 +47,7 @@ public class UserServiceImpl implements userService{
 		if(updateUser.getId() != null) {
 			
 			userRepo.save(updateUser);
-			System.out.println("update user");
 		}
-		System.out.println("error");
 		
 	}
 

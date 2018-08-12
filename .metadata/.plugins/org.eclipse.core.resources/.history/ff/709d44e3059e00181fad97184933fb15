@@ -42,17 +42,6 @@ public class UserServiceImpl implements userService{
 		
 	}
 
-	@Override
-	public void updateUser(@Valid userModel updateUser) {
-		if(updateUser.getId() != null) {
-			
-			userRepo.save(updateUser);
-			System.out.println("update user");
-		}
-		System.out.println("error");
-		
-	}
-
 	
 	
 

@@ -109,6 +109,7 @@ public class userController {
 		System.out.println("return edit4");
 		//mv.setViewName("editUser");
 		
+		System.out.println("return edit5");
 		
 		mv.addObject("allUsers", userService.getAllUsers());
 		
